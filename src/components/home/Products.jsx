@@ -1,15 +1,20 @@
+/* eslint-disable react/prop-types */
 import SingleProduct from "./SingleProduct";
 
 
-const Products = () => {
+const Products = ({data}) => {
+   
+    console.log(data)
     return (
         <div>
             <h1 className="my-8 text-2xl font-bold text-center">Our Products</h1>
 
-            <div className="flex gap-2 ">
-                <SingleProduct/>
-                <SingleProduct/>
-                <SingleProduct/>
+            <div className="flex gap-4 justify-center items-center ">
+               {
+                data.slice(0,3)?.map((shoe) =>
+                    (<SingleProduct key={shoe.id} shoe={shoe}/>)
+            )
+               }
             </div>
             
         </div>

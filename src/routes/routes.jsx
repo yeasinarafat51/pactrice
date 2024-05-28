@@ -6,6 +6,10 @@ import Login from "../pages/Login";
 import ErrorPage from "../pages/ErrorPage";
 import DashboardLayout from "../layouts/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
+import Registetion from "../pages/Registetion";
+import PrivetRoutes from "./privet/PrivetRoutes";
+import ProductDetails from "../pages/ProductDetails";
+import AllProducts from "../pages/AllProducts";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +20,12 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch('http://localhost:3000/shoes')
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails/>,
+        loader: ({params}) => fetch(`http://localhost:3000/shoes/${params.id}`)
       },
       {
         path: "/about",
@@ -25,12 +35,23 @@ export const router = createBrowserRouter([
         path: "/login",
         element: <Login />,
       },
+      {
+        path: "/register",
+        element: <Registetion/>,
+      },
     ],
   },
   {
     path: "dashboard",
     element: <DashboardLayout />,
     errorElement: <ErrorPage />,
-    children: [{ path: "", element: <Dashboard /> }],
+    children: [
+      { path: "home",
+       element: <PrivetRoutes><Dashboard /></PrivetRoutes>
+       },
+      { path: "dashboard/all-products",
+       element: <PrivetRoutes><AllProducts/></PrivetRoutes>
+       },
+      ],
   },
 ]);
