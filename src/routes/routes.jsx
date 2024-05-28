@@ -10,6 +10,8 @@ import Registetion from "../pages/Registetion";
 import PrivetRoutes from "./privet/PrivetRoutes";
 import ProductDetails from "../pages/ProductDetails";
 import AllProducts from "../pages/AllProducts";
+import AddProducts from "../pages/AddProducts";
+import EditProducts from "../pages/EditProducts";
 
 export const router = createBrowserRouter([
   {
@@ -49,9 +51,17 @@ export const router = createBrowserRouter([
       { path: "home",
        element: <PrivetRoutes><Dashboard /></PrivetRoutes>
        },
-      { path: "dashboard/all-products",
+      { path: "all-products",
        element: <PrivetRoutes><AllProducts/></PrivetRoutes>
        },
+      { path: "add-products",
+       element: <PrivetRoutes><AddProducts/></PrivetRoutes>
+       },
+      { path: "all-products/edit/:id",
+       element: <PrivetRoutes><EditProducts/></PrivetRoutes>,
+       loader:({params}) => fetch(`http://localhost:3000/shoes/${params.id}`)
+       },
+       
       ],
   },
 ]);
