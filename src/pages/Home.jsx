@@ -4,10 +4,12 @@ import Banner from "../components/home/Banner";
 import Products from "../components/home/Products";
 import Disply from "../components/home/Disply";
 
+
 const Home = () => {
   const data = useLoaderData()
   return (
     <div>
+      {/* <Paralax/> */}
       <Banner />
       <Products data={data}/>
       <Disply/>

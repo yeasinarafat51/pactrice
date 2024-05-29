@@ -8,7 +8,7 @@ const Disply = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className='flex'>
+    <div className='flex flex-wrap ml-4'>
     <img src={shoe1} className="max-w-sm  shadow-2xl" />
     <img src={shoe2} className="max-w-sm  shadow-2xl" />
     </div>
