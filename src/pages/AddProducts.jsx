@@ -15,7 +15,7 @@ const AddProducts = () => {
         const image_url = form.image_url.value;
     
         const data = { id, title, brand, price, description, image_url };
-        await fetch("http://localhost:3000/shoes",{
+        await fetch("http://localhost:5000/shoes",{
             method: "POST",
             headers:{
                 "Content-type":"application/json",

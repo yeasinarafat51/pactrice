@@ -17,16 +17,16 @@ const EditProducts = () => {
       e.preventDefault();
   
       const form = e.target;
-      const id = form.id.value;
+    
       const title = form.title.value;
       const brand = form.brand.value;
       const price = form.price.value;
       const description = form.description.value;
       const image_url = form.image_url.value;
   
-      const data = { id, title, brand, price, description, image_url };
+      const data = {  title, brand, price, description, image_url };
   
-      await fetch(`http://localhost:3000/shoes/${shoe.id}`, {
+      await fetch(`http://localhost:5000/shoes/${shoe._id}`, {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
@@ -100,16 +100,7 @@ const EditProducts = () => {
                 onChange={(e) => setImageURL(e.target.value)}
               />
             </div>
-            <div className="mt-2">
-              <input
-                className="bg-gray-100 p-4 w-full border border-black rounded-lg"
-                type="text"
-                name="id"
-                placeholder="ID"
-                value={id}
-                onChange={(e) => setId(e.target.value)}
-              />
-            </div>
+            
             {/* The button to open modal */}
 <label htmlFor="my_modal_6" className="btn mt-4 w-full bg-green-500 text-white p-4">Edit Product</label>
 

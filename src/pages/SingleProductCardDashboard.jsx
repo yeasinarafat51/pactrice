@@ -5,13 +5,13 @@ import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
 const SingleProductCardDashboard = ({shoe, onDelete}) => {
-    const { id, title, brand, price, description, image_url } = shoe;
+    const { _id, title, brand, price, description, image_url } = shoe;
     const handleDelete = async() =>{
-        await fetch(`http://localhost:3000/shoes/${id}`,{
+        await fetch(`http://localhost:5000/shoes/${_id}`,{
             method:"DELETE",
         }).then(res=> res.json()).then(data =>{
             console.log(data)
-            onDelete(id)
+            onDelete(_id)
             toast.success('Delete sucess')
             
         })
@@ -28,10 +28,10 @@ const SingleProductCardDashboard = ({shoe, onDelete}) => {
             <p>{description}</p>
             <div className="card-actions justify-end">
               <button className="btn bg-indigo-500 text-white">
-                <Link to={`/products/${id}`}>See details</Link>
+                <Link to={`/products/${_id}`}>See details</Link>
               </button>
               <button className="btn bg-green-600 text-white">
-                <Link to={`edit/${id}`}>Edit</Link>
+                <Link to={`edit/${_id}`}>Edit</Link>
               </button>
              
               <button className="btn btn-accent" onClick={()=>document.getElementById('my_modal_5').showModal()}>Delete</button>

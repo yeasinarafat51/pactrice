@@ -47,6 +47,14 @@
       "price": "200",
       "description": "Bata 's Classic Leather sneakers are timeless icons, offering everyday comfort and a sleek look with their soft leather upper",
       "image_url": "https://img.freepik.com/free-psd/running-shoes-sneakers-transparent-background_84443-1610.jpg?t=st=1716454855~exp=1716458455~hmac=7bbba604387bb3447eb82633eaf611178ba651580f20fd9d4a5610fa1c6bbd40&w=1480"
+    },
+    {
+      "id": "13",
+      "title": "Bata pro",
+      "brand": "BATA",
+      "price": "220",
+      "description": "Bata 's Classic Leather sneakers are timeless icons, offering everyday comfort and a sleek look with their soft leather upper",
+      "image_url": "https://img.freepik.com/free-psd/running-shoes-sneakers-transparent-background_84443-1610.jpg?t=st=1716454855~exp=1716458455~hmac=7bbba604387bb3447eb82633eaf611178ba651580f20fd9d4a5610fa1c6bbd40&w=1480"
     }
   ]
 }
