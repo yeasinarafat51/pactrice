@@ -15,6 +15,9 @@ const DashboardLayout = () => {
             <Link to={"add-products"}>Add Product</Link>
           </li>
           <li className=" p-4 text font-semibold w-full">
+            <Link to={"search"}>Search</Link>
+          </li>
+          <li className=" p-4 text font-semibold w-full">
             <Link to={"/"}>Home</Link>
           </li>
         </ul>

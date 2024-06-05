@@ -13,6 +13,9 @@ import AllProducts from "../pages/AllProducts";
 import AddProducts from "../pages/AddProducts";
 import EditProducts from "../pages/EditProducts";
 import EditProfile from "../pages/EditProfile";
+import Woman from "../pages/Woman";
+import Cosmatic from "../pages/Cosmatic";
+import SearchProduct from "../pages/SearchProduct";
 
 export const router = createBrowserRouter([
   {
@@ -31,8 +34,12 @@ export const router = createBrowserRouter([
         loader: ({params}) => fetch(`http://localhost:5000/shoes/${params.id}`)
       },
       {
-        path: "/about",
-        element: <About />,
+        path: "/woman",
+        element: <Woman/>,
+      },
+      {
+        path: "/cosmatic",
+        element: <Cosmatic/>,
       },
       {
         path: "/login",
@@ -60,10 +67,20 @@ export const router = createBrowserRouter([
       { path: "all-products",
        element: <PrivetRoutes><AllProducts/></PrivetRoutes>
        },
+      { path: "woman/all-products",
+       element: <PrivetRoutes><AllProducts/></PrivetRoutes>
+       },
       { path: "add-products",
        element: <PrivetRoutes><AddProducts/></PrivetRoutes>
        },
+      { path: "search",
+       element: <PrivetRoutes><SearchProduct/></PrivetRoutes>
+       },
       { path: "all-products/edit/:id",
+       element: <PrivetRoutes><EditProducts/></PrivetRoutes>,
+       loader:({params}) => fetch(`http://localhost:5000/shoes/${params.id}`)
+       },
+      { path: "search/edit/:id",
        element: <PrivetRoutes><EditProducts/></PrivetRoutes>,
        loader:({params}) => fetch(`http://localhost:5000/shoes/${params.id}`)
        },

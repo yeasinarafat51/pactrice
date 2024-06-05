@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 // eslint-disable-next-line no-unused-vars
 const SingleProduct = ({shoe}) => {
-  const { id, title, brand, price, description, image_url } = shoe;
+  const { _id, title, brand, price, description, image_url } = shoe;
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
@@ -17,7 +17,7 @@ const SingleProduct = ({shoe}) => {
         <p>{description}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">
-            <Link to={`/products/${id}`}>See details</Link>
+            <Link to={`/products/${_id}`}>See details</Link>
           </button>
         </div>
       </div>

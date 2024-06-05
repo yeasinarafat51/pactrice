@@ -9,7 +9,7 @@ const Navbar = () => {
     .then()
 }
   return  (
-    <div className="navbar bg-base-100">
+    <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,7 +36,10 @@ const Navbar = () => {
               <Link to={"/"}>Home</Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <Link to={"/woman"}>Women</Link>
+            </li>
+            <li>
+              <Link to={"/cosmatic"}>Cosmatic</Link>
             </li>
             {!user && (
               <>
@@ -65,16 +68,19 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">SHOWES</a>
+        <a className="btn btn-ghost text-xl">M & W</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li>
+          <li className=" text-black">
             <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <Link to={"/about"}>About</Link>
+            <Link to={"/woman"}>Woman</Link>
           </li>
+          <li>
+              <Link to={"/cosmatic"}>Cosmatic</Link>
+            </li>
           {!user && (
             <>
               <li>

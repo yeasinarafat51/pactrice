@@ -10,6 +10,7 @@ const EditProfile = () => {
       const form = e.target;
   
       const name = form.name.value;
+      const img = form.img.value;
   
       const age = form.age.value;
       const mobileNumber = form.mobileNumber.value;
@@ -18,6 +19,7 @@ const EditProfile = () => {
         name,
         age,
         mobileNumber,
+        img
         //   email: data?.email,
       };
   
@@ -71,6 +73,7 @@ const EditProfile = () => {
             />
           </div>
           <div className="flex flex-col">
+          <label htmlFor="">Images Upload</label>
           <input type="file" id="img" name="img" accept="image/*"/>
           </div>
           <div className="flex flex-col">
