@@ -26,12 +26,12 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch('http://localhost:5000/shoes')
+        loader: () => fetch('https://assinment-server-ten.vercel.app/shoes')
       },
       {
         path: "/products/:id",
         element: <ProductDetails/>,
-        loader: ({params}) => fetch(`http://localhost:5000/shoes/${params.id}`)
+        loader: ({params}) => fetch(`https://assinment-server-ten.vercel.app/shoes/${params.id}`)
       },
       {
         path: "/woman",
@@ -62,7 +62,7 @@ export const router = createBrowserRouter([
        },
       { path: "profile/edit/:id",
        element: <PrivetRoutes><EditProfile/></PrivetRoutes>,
-       loader:({params}) => fetch(`http://localhost:5000/user/get/${params.id}`)
+       loader:({params}) => fetch(`https://assinment-server-ten.vercel.app/user/get/${params.id}`)
        },
       { path: "all-products",
        element: <PrivetRoutes><AllProducts/></PrivetRoutes>
@@ -78,11 +78,11 @@ export const router = createBrowserRouter([
        },
       { path: "all-products/edit/:id",
        element: <PrivetRoutes><EditProducts/></PrivetRoutes>,
-       loader:({params}) => fetch(`http://localhost:5000/shoes/${params.id}`)
+       loader:({params}) => fetch(`https://assinment-server-ten.vercel.app/shoes/${params.id}`)
        },
       { path: "search/edit/:id",
        element: <PrivetRoutes><EditProducts/></PrivetRoutes>,
-       loader:({params}) => fetch(`http://localhost:5000/shoes/${params.id}`)
+       loader:({params}) => fetch(`https://assinment-server-ten.vercel.app/shoes/${params.id}`)
        },
        
       ],

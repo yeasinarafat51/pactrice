@@ -9,11 +9,12 @@ const EditProducts = () => {
     const [title, setTitle] = useState(shoe.title);
     const [price, setPrice] = useState(shoe.price);
     const [brand, setBrand] = useState(shoe.brand);
-    const [id, setId] = useState(shoe.id);
+    // const [id, setId] = useState(shoe.id);
     const [description, setDescription] = useState(shoe.description);
     const [image_url, setImageURL] = useState(shoe.image_url);
-  
+    const token = localStorage.getItem('token')
     const handleSubmit = async (e) => {
+     
       e.preventDefault();
   
       const form = e.target;
@@ -26,10 +27,11 @@ const EditProducts = () => {
   
       const data = {  title, brand, price, description, image_url };
   
-      await fetch(`http://localhost:5000/shoes/${shoe._id}`, {
+      await fetch(`https://assinment-server-ten.vercel.app/shoes/${shoe._id}`, {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
+          authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(data),
       })

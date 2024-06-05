@@ -5,9 +5,10 @@ import SingleProductCardDashboard from './SingleProductCardDashboard';
 
 const AllProducts = () => {
     const [products, setProducts] = useState([]);
+    const token = localStorage.getItem('token')
 
     useEffect(()=>{
-        fetch('http://localhost:5000/shoes/')
+        fetch('https://assinment-server-ten.vercel.app/shoes/')
         .then(res =>res.json())
         .then(data=>setProducts(data))
     },[])

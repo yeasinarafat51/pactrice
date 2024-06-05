@@ -11,7 +11,7 @@ const GoogleLogin = () => {
               email: data?.user?.email,
               name: data?.user?.displayName,
             };
-            fetch("http://localhost:5000/user", {
+            fetch("https://assinment-server-ten.vercel.app/user", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -19,7 +19,10 @@ const GoogleLogin = () => {
               body: JSON.stringify(userInfo),
             })
               .then((res) => res.json())
-              .then((data) => console.log(data));
+              .then((data) => {
+                console.log(data)
+                // localStorage.setItem("token", data?.token);
+              });
           }
         });
     }

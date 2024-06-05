@@ -5,10 +5,15 @@ import { toast } from "react-toastify";
 
 // eslint-disable-next-line react/prop-types
 const SingleProductCardDashboard = ({shoe, onDelete}) => {
+  const token = localStorage.getItem('token')
     const { _id, title, brand, price, description, image_url } = shoe;
     const handleDelete = async() =>{
-        await fetch(`http://localhost:5000/shoes/${_id}`,{
+        await fetch(`https://assinment-server-ten.vercel.app/shoes/${_id}`,{
             method:"DELETE",
+            headers: {
+              "Content-type": "application/json",
+              authorization: `Bearer ${token}`,
+            },
         }).then(res=> res.json()).then(data =>{
             console.log(data)
             onDelete(_id)

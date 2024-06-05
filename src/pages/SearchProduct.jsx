@@ -9,7 +9,7 @@ const SearchProduct = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get('http://localhost:5000/shoes', {
+            const result = await axios.get('https://assinment-server-ten.vercel.app/shoes', {
                 params: { search }
             });
             setItems(result.data);

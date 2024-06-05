@@ -9,7 +9,7 @@ const Dashboard = () => {
   console.log(user)
 
   useEffect(() => {
-    fetch(`http://localhost:5000/user/${user?.email}`)
+    fetch(`https://assinment-server-ten.vercel.app/user/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setUserInfo(data));
      
