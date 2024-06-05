@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 # Cient side
 LiveLink:https://pactrice.vercel.app/
-#useges
+# useges
 Toast
 Swiper.js
 daiusy
