@@ -3,6 +3,7 @@ import SingleProduct from "./SingleProduct";
 
 
 const Products = ({data}) => {
+
    
     console.log(data)
     return (

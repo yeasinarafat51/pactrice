@@ -35,7 +35,7 @@ const Registetion = () => {
               email: data?.user?.email,
               name:name,
             };
-            fetch("https://assinment-server-ten.vercel.app/user", {
+            fetch("https://assinment-server-ten.vercel.appuser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

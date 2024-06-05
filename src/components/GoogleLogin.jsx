@@ -11,7 +11,7 @@ const GoogleLogin = () => {
               email: data?.user?.email,
               name: data?.user?.displayName,
             };
-            fetch("https://assinment-server-ten.vercel.app/user", {
+            fetch("https://assinment-server-ten.vercel.appuser", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
