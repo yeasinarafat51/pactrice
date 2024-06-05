@@ -15,6 +15,7 @@ Swiper.js
 daiusy
 github
 vercel
+etc
 <!-- @ 
 
 
