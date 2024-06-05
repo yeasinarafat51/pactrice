@@ -65,7 +65,7 @@ const Registetion = () => {
               {/* Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
               a id nisi. */}
-              <img src={res} alt="" />
+              <img className="w-full" src={res} alt="" />
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
